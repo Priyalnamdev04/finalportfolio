@@ -1,0 +1,354 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background: color #140812;
+    color:#5177f3;
+}
+#header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-image: url(p.jpg);
+    background-size:cover;
+    background-position: center;
+    justify-content: space-between;
+   
+}
+.container{
+    padding: 10px 20%;
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    position: fixed;
+   
+}
+.logo{
+    width: 80px;
+}
+ nav ul li{
+     display: inline-block;
+     list-style: none;
+     margin: 10px 20px;
+    
+}
+nav ul li a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 28px;
+    position: relative  ;
+}
+nav ul li a::after{
+    content: '';
+    width:100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition:0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color:#0f584f;
+}
+#about{
+    padding: 80px 0;
+    color: #f7f0f0;
+   background-color: black;
+   text-align: center;
+
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+
+
+.about-col2{
+    flex-basis: 100%;
+    color: #fcfcfcea;
+    font-size: 20;
+    width: 50%;
+    text-align: center;
+
+}
+.about-col2 h1{
+    text-align: center;
+    color: #fcfcfcea;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #1737eb;
+    text-align: center; text-shadow: 2px 2px 5px rgb(119, 201, 226);
+     
+
+.sub-title1{
+    font-size: 60px;
+    font-weight: 600;
+    color: #1737eb;
+    text-align: center;
+ text-shadow: 5px 5px 5px rgb(119, 201, 226);
+}
+   
+}
+.tab-titles{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 50px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #1622d4;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.active-links.tab-links::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    color: #9e5a00;
+    font-weight: 200;
+}
+.tab-contents ul li span{
+    color: #1b0c1b;
+    font-size: 24px;
+
+}
+.tab-contents{
+    display: none;
+}
+.active-tab.tab-contents{
+    display: block;
+}
+#ser{
+    margin-bottom: 100px;
+    
+    padding-top: 200px;
+}
+
+#services{
+    padding: 30px 0;
+    
+    
+}
+.services.container.sub-title h1{
+    color: white;
+}
+.services-list{
+    display: flex;
+    /* grid-template-row:repeat(auto-fit,minmax(250)) ;
+    } */
+     flex-direction: row;
+     padding-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300px;
+    border-right: 10px;
+}
+#portfolio{
+    padding: 30px 0;
+    background-color: #000;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    border: 2px solid #130303;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #e0dde6;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6),#9509cc);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+     justify-content: center;
+     flex-direction: column;
+}
+/*---------------contact-----------*/
+#contact {
+    background-color: #000;
+    color: #e6dfe8;
+    padding: 50px 20px;
+    text-align: center;
+}
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+#contact input,
+#contact textarea{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: 1px solid gray;
+    font-size: 1rem;
+
+}
+#contact button{
+    background-color: #5052c9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color  0.3s ease;
+}
+#contact input:hover{
+    transform: scale(1.05);
+    transition:transform 0.6s ease-in-out;
+    box-shadow: 10px 10px 10px rgba(2,3,5,0.3);
+}
+#contact textarea:hover{
+    transform: scale(1.05);
+    transition: trasform 0.6s ease-in-out;
+    box-shadow: 10px 10px 10px rgba(2,3,5,0.3);
+
+}
+#contact button:hover{
+    background-color: #2980b9;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(122,130,110,0.5);
+    transform: calc(1.06);
+    transition: 0.6s ease-in-out;
+    
+}
+
+
+
+
+/* contact  */
+/* Reset some default browser styling */
+
+
+
+#contact {
+    width: 100%;
+    background-color: #000;
+    
+}
+.contactteg{
+    background-color: rgba(53, 53, 53, 0.808);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 50px auto;
+    box-sizing: border-box;
+    
+}
+
+.h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+form button {
+  padding: 12px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+form textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+form input[type="email"]:invalid {
+  border-color: #f44336;
+}
+
+form input[type="text"]:invalid {
+  border-color: #f44336;
+}
